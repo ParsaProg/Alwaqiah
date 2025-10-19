@@ -7,7 +7,18 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          Light: "",
+          Dark: "",
+        },
+        secondry: {
+          Light: "",
+          Dark: "",
+        },
+      },
+    },
   },
   plugins: [],
 };
