@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.iransans {
+    font-family: IranSans;
+}
+
+.untihamo {
+    font-family: Untihamo;
+}
+
+@font-face {
+    font-family: IranSans;
+    src: url("../../public/fonts/IranSans.ttf");
+}
+
+@font-face {
+    font-family: Untihamo;
+    src: url("../../public/fonts/Untihamo.ttf");
+}
