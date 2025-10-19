@@ -548,3 +548,23 @@ video {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
+
+.iransans {
+  font-family: IranSans;
+}
+
+.untihamo {
+  font-family: Untihamo;
+}
+
+@font-face {
+  font-family: IranSans;
+
+  src: url("../../public/fonts/IranSans.ttf");
+}
+
+@font-face {
+  font-family: Untihamo;
+
+  src: url("../../public/fonts/Untihamo.ttf");
+}
