@@ -12,10 +12,21 @@
 
 @font-face {
     font-family: IranSans;
-    src: url("../../public/fonts/IranSans.ttf");
+    src: url("../../public/fonts/iranSansX-light.woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: IranSans;
+    src: url("../../public/fonts/iranSansX-Bold.woff2");
+    font-weight: 900;
 }
 
 @font-face {
     font-family: Untihamo;
     src: url("../../public/fonts/Untihamo.ttf");
+}
+
+body{
+    user-select: none;
 }
