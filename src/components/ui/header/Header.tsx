@@ -13,6 +13,7 @@ import {
   GraduationCap,
   Images,
   LibraryBig,
+  Menu,
   MessageCircleDashed,
   Moon,
   Store,
@@ -21,8 +22,11 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import MobileHeader from "./mobile/mobile-header";
 
 export default function Header() {
+  const [showDialog, setShowDialog] = useState<boolean>(false);
   const navItems = [
     {
       title: "قران",
@@ -79,38 +83,56 @@ export default function Header() {
   return (
     <>
       <div className="text-white bg-[#4c5ed5] backdrop-blur-lg z-[10000] fixed top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
-        <div className="font-bold w-[90%] flex items-center justify-between border-b-[1px] border-b-white">
-          <div className="flex items-center">
+        <div className="[@media(min-width:1495px)]:w-[90%] w-[95%] flex items-center justify-between border-b-[1px] border-b-white py-5">
+          <Link href="/" className="flex items-center gap-x-2">
             <Image
               draggable={false}
               alt="logo"
               src={Logo.src}
               width={800}
               height={800}
-              className="w-[110px] h-[110px]"
+              className="w-[60px] h-[60px]"
             ></Image>
-            <h1 className="text-white mx-[-15px] untihamo text-3xl">الواقعه</h1>
-          </div>
-          <div className="flex items-center gap-x-5 text-md">
-            <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-white rounded-xl flex items-center justify-center gap-x-2 p-3">
-              <Store size={20} />
+            <h1 className="text-white untihamo text-3xl">الواقعه</h1>
+          </Link>
+          <div className="flex items-center gap-x-3 text-sm">
+            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <Store size={18} />
               درباره تیم‌توسعه
             </button>
-            <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-white rounded-xl flex items-center justify-center gap-x-2 p-3">
-              <MessageCircleDashed size={20} />
+            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <MessageCircleDashed size={18} />
               نظرات مسلمانان
             </button>
 
-            <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-white rounded-xl flex items-center justify-center gap-x-2 p-3">
-              <UserRoundCheck size={20} />
-              ورود / عضویت
+            <button className=" hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <UserRoundCheck size={18} />
+              <h1 className="[@media(max-width:570px)]:hidden visible">
+                ورود / عضویت
+              </h1>
             </button>
-            <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-white rounded-xl flex items-center justify-center gap-x-2 p-3">
-              <Moon size={20} />
+            <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <Moon size={18} />
             </button>
+            <div className="relative">
+              <button
+                onClick={() => {
+                  setShowDialog(!showDialog);
+                }}
+                className="[@media(min-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3"
+              >
+                <Menu size={18} />
+              </button>
+
+              <MobileHeader
+                showDialog={showDialog}
+                setShowDialog={setShowDialog}
+                navList={navItems}
+              />
+            </div>
           </div>
         </div>
-        <div className="w-[90%] mx-auto text-white py-3 bg-[#4c5ed5] backdrop-blur-lg h-auto flex border-b-[1px] border-t-white gap-x-1">
+        <div className="[@media(max-width:1495px)]:hidden visible w-[90%] mx-auto text-white py-3 bg-[#4c5ed5] backdrop-blur-lg h-auto flex border-b-[1px] border-t-white gap-x-1">
           {navItems.map((nav, _i) => {
             return (
               <div key={_i} className={`relative ${nav.subs ? "group" : ""}`}>
@@ -135,28 +157,52 @@ export default function Header() {
                  transition-all duration-200 text-start flex flex-col"
                     role="menu"
                   >
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       ترجمه
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       تفسیر
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       حدیث
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       اعلام و اسما
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       اعراب قران
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       موضوعات
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       آیالت مرتبط
                     </Link>
-                    <Link href="/" className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block">
+                    <Link
+                      href="/"
+                      className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                    >
                       آیات در کتاب
                     </Link>
                   </div>
