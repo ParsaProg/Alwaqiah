@@ -10,27 +10,13 @@ export default function MobileHeader({
   showDialog,
   setShowDialog,
   navList,
+  dialogRef,
 }: {
   showDialog: boolean;
   setShowDialog: (value: boolean) => void;
   navList: Array<any>;
+  dialogRef: any;
 }) {
-  const dialogRef: any = useRef(null);
-  useEffect(() => {
-    const handleClickOutSide = (event: MouseEvent) => {
-      if (
-        dialogRef.current &&
-        !dialogRef.current.contains(event.target as Node)
-      ) {
-        setShowDialog(false);
-      }
-    };
-    if (showDialog) {
-      document.addEventListener("mousedown", handleClickOutSide);
-    }
-
-    return removeEventListener("mousedown", handleClickOutSide);
-  }, [showDialog, setShowDialog]);
   return (
     <div className="[@media(max-width:1495px)]:opacity-[1] opacity-0 transition-opacity duration-200">
       <AnimatePresence>
@@ -41,7 +27,7 @@ export default function MobileHeader({
             initial="hidden"
             animate="visible"
             exit="hidden"
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.1, duration: 0.1 }}
             variants={{
               visible: {
                 scale: 1,
