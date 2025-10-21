@@ -22,10 +22,12 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MobileHeader from "./mobile/mobile-header";
 
 export default function Header() {
+  const dialogRef: any = useRef(null);
+  const menuButtonRef: any = useRef(null);
   const [showDialog, setShowDialog] = useState<boolean>(false);
   const navItems = [
     {
@@ -80,6 +82,23 @@ export default function Header() {
       icon: <Clock10 size={18} />,
     },
   ];
+  useEffect(() => {
+    const handleClickOutSide = (event: MouseEvent) => {
+      if (
+        dialogRef.current &&
+        menuButtonRef.current &&
+        !dialogRef.current.contains(event.target as Node) &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setShowDialog(false);
+      }
+    };
+    if (showDialog) {
+      document.addEventListener("mousedown", handleClickOutSide);
+    }
+
+    return removeEventListener("mousedown", handleClickOutSide);
+  }, [showDialog, setShowDialog]);
   return (
     <>
       <div className="text-white bg-[#4c5ed5] backdrop-blur-lg z-[10000] fixed top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
@@ -116,6 +135,7 @@ export default function Header() {
             </button>
             <div className="relative">
               <button
+                ref={menuButtonRef}
                 onClick={() => {
                   setShowDialog(!showDialog);
                 }}
@@ -128,6 +148,7 @@ export default function Header() {
                 showDialog={showDialog}
                 setShowDialog={setShowDialog}
                 navList={navItems}
+                dialogRef={dialogRef}
               />
             </div>
           </div>
