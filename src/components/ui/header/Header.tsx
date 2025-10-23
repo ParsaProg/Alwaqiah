@@ -102,7 +102,7 @@ export default function Header() {
   }, [showDialog, setShowDialog]);
   return (
     <>
-      <div className="text-white bg-[#4c5ed5] backdrop-blur-lg z-[10000] fixed top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
+      <div className="text-white bg-[#4c5ed5f3] backdrop-blur-lg z-[10000] fixed top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
         <div className="[@media(min-width:1495px)]:w-[90%] w-[95%] flex items-center justify-between border-b-[1px] border-b-white py-5">
           <Link href="/" className="flex items-center gap-x-2">
             <Image
@@ -116,16 +116,16 @@ export default function Header() {
             <h1 className="text-white untihamo text-3xl">الواقعه</h1>
           </Link>
           <div className="flex items-center gap-x-3 text-sm">
-            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
               <Store size={18} />
               درباره تیم‌توسعه
             </button>
-            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
               <MessageCircleDashed size={18} />
               نظرات مسلمانان
             </button>
 
-            <button className=" hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+            <button className=" hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
               <UserRoundCheck size={18} />
               <h1 className="[@media(max-width:570px)]:hidden visible">
                 ورود / عضویت
