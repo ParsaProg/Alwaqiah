@@ -1,9 +1,13 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function DesktopHeader({ navItems }: { navItems: Array<any> }) {
   return (
-    <div className="[@media(max-width:1495px)]:hidden visible w-[90%] mx-auto text-white py-3 h-auto flex border-b-[1px] border-t-white gap-x-1">
+    <motion.div
+      transition={{ duration: 0.2 }}
+      className="[@media(max-width:1495px)]:hidden visible w-[90%] mx-auto text-white py-3 h-auto flex border-b-[1px] border-t-white"
+    >
       {navItems.map((nav, _i) => {
         return (
           <div key={_i} className={`relative ${nav.subs ? "group" : ""}`}>
@@ -80,6 +84,6 @@ export default function DesktopHeader({ navItems }: { navItems: Array<any> }) {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
