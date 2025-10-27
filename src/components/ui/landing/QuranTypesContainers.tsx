@@ -50,9 +50,9 @@ export default function QuranContainerTypes() {
   },
   ];
   return (
-    <div className="mt-[100px] [@media(min-width:1495px)]:w-[90%] w-[95%] p-8 bg-[#4C5FD5] rounded-xl flex items-center justify-center gap-x-[80px]  mx-auto">
+    <div className="mt-[100px] [@media(min-width:1495px)]:w-[90%] w-[95%] p-8 flex-wrap bg-[#4C5FD5] rounded-xl flex items-center justify-center gap-[80px] mx-auto">
       {items.map((item, _i) => {
-        return <div key={_i} className="text-white flex flex-col items-center gap-y-1">
+        return <div key={_i} className="text-white flex  flex-col items-center gap-y-1">
             <div className="mb-2 p-3 rounded-xl bg-[#ffffff28] border-[4px] border-white flex items-center justify-center">
                 {item.icon}
             </div>
