@@ -5,7 +5,6 @@ export default function ClientLayout({
 }) {
   return (
     <div dir="rtl">
-      <div className="mt-[101px]"></div>
       {children}
     </div>
   );
