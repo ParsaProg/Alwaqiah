@@ -6,7 +6,7 @@ export default function DesktopHeader({ navItems }: { navItems: Array<any> }) {
   return (
     <motion.div
       transition={{ duration: 0.2 }}
-      className="[@media(max-width:1495px)]:hidden visible w-[90%] mx-auto text-white py-3 h-auto flex border-b-[1px] border-t-white"
+      className="sticky [@media(max-width:1495px)]:hidden visible w-[90%] mx-auto text-white py-3 h-auto flex border-b-[1px] border-t-[#E2E6F0]"
     >
       {navItems.map((nav, _i) => {
         return (
