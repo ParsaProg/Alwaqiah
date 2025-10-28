@@ -148,79 +148,62 @@ export default function Header() {
   // }, [showBaseHeader, setShowBaseHeader]);
   return (
     <>
-      <div className=" text-white bg-[#4c5ed5f3] backdrop-blur-lg z-[10000] fixed top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
-        <AnimatePresence>
-          {showBaseHeader && (
-            <motion.div
-              initial={"hidden"}
-              animate="visible"
-              exit="hidden"
-              variants={{
-                hidden: { opacity: 0, display: "none" },
-                visible: { opacity: 1, display: "flex" },
-              }}
-              transition={{ duration: 0.2 }}
-              className="[@media(min-width:1495px)]:w-[90%] w-[95%] flex items-center justify-between border-b-[1px] border-b-white py-5"
-            >
-              <Link href="/" className="flex items-center gap-x-2">
-                <Image
-                  draggable={false}
-                  alt="logo"
-                  src={Logo.src}
-                  width={800}
-                  height={800}
-                  className="w-[60px] h-[60px]"
-                ></Image>
-                <h1 className="text-white untihamo text-3xl">الواقعه</h1>
-              </Link>
-              <div className="flex items-center gap-x-3 text-sm">
-                <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
-                  <Store size={18} />
-                  درباره تیم‌توسعه
-                </button>
-                <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
-                  <MessageCircleDashed size={18} />
-                  نظرات مسلمانان
-                </button>
+      <div className="[@media(max-width:1495px)]:sticky text-white bg-[#4c5ed5] backdrop-blur-lg z-[10000] top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
+        <div className="[@media(min-width:1495px)]:w-[90%] w-[95%] flex items-center justify-between border-b-[1px] border-b-[#E2E6F0] py-5">
+          <Link href="/" className="flex items-center gap-x-2">
+            <Image
+              draggable={false}
+              alt="logo"
+              src={Logo.src}
+              width={800}
+              height={800}
+              className="w-[60px] h-[60px]"
+            ></Image>
+            <h1 className="text-white untihamo text-3xl">الواقعه</h1>
+          </Link>
+          <div className="flex items-center gap-x-3 text-sm">
+            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <Store size={18} />
+              درباره تیم‌توسعه
+            </button>
+            <button className="[@media(max-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <MessageCircleDashed size={18} />
+              نظرات مسلمانان
+            </button>
 
-                <button className=" hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
-                  <UserRoundCheck size={18} />
-                  <h1 className="[@media(max-width:570px)]:hidden visible">
-                    ورود / عضویت
-                  </h1>
-                </button>
-                <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
-                  <Moon size={18} />
-                </button>
-                <div className="relative">
-                  <button
-                    ref={menuButtonRef}
-                    onClick={() => {
-                      setShowDialog(!showDialog);
-                    }}
-                    className="[@media(min-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3"
-                  >
-                    <Menu size={18} />
-                  </button>
+            <button className=" hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <UserRoundCheck size={18} />
+              <h1 className="[@media(max-width:570px)]:hidden visible">
+                ورود / عضویت
+              </h1>
+            </button>
+            <button className="hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+              <Moon size={18} />
+            </button>
+            <div className="relative">
+              <button
+                ref={menuButtonRef}
+                onClick={() => {
+                  setShowDialog(!showDialog);
+                }}
+                className="[@media(min-width:1495px)]:hidden visible hover:bg-white hover:text-[#4C5FD5] transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3"
+              >
+                <Menu size={18} />
+              </button>
 
-                  <MobileHeader
-                    showDialog={showDialog}
-                    setShowDialog={setShowDialog}
-                    navList={navItems}
-                    dialogRef={dialogRef}
-                  />
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div
-          className={`w-full transition-all duration-300 ${
-            showBaseHeader ? "mt-1" : "mt-0"
-          }`}
-        >
-          <DesktopHeader navItems={navItems} />
+              <MobileHeader
+                showDialog={showDialog}
+                setShowDialog={setShowDialog}
+                navList={navItems}
+                dialogRef={dialogRef}
+              />
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div className="sticky text-white bg-[#4c5ed5] backdrop-blur-lg z-[10000] top-0 w-full h-auto flex flex-col items-center justify-center mx-auto">
+        <DesktopHeader navItems={navItems} />
       </div>
     </>
   );
