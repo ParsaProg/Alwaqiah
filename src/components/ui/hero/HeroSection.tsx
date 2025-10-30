@@ -7,7 +7,7 @@ import { Microscope, Search } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <div className="relative w-full py-2 bg-[#4C5FD5] [@media(max-width:1220px)]:h-auto h-[525px]">
+    <div className="relative w-full py-2 bg-primary-Light [@media(max-width:1220px)]:h-auto h-[525px]">
       <div
         className="absolute inset-0 w-full [@media(max-width:1220px)]:h-auto h-[525px]"
         style={{
@@ -62,7 +62,7 @@ export const HeroSection = () => {
                 className="absolute right-2 top-[50%] translate-y-[-50%]"
               />
             </div>
-            <div className="cursor-pointer transition-colors duration-200 p-3 rounded-lg bg-[#FFB400] text-black gap-x-2 flex items-center flex-shrink-0 justify-center hover:bg-[#7C5CE3] hover:text-white">
+            <div className="cursor-pointer transition-colors duration-200 p-3 rounded-lg bg-secondry-Light text-black gap-x-2 flex items-center flex-shrink-0 justify-center hover:bg-confirmHover-Light hover:text-white">
               بررسی آیه
               <Microscope size={18} />
             </div>
