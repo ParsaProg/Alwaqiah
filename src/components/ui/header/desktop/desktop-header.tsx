@@ -13,7 +13,7 @@ export default function DesktopHeader({ navItems }: { navItems: Array<any> }) {
           <div key={_i} className={`relative ${nav.subs ? "group" : ""}`}>
             <Link
               href={nav.route}
-              className={`font-thin p-3 hover:bg-white hover:text-[#4C5FD5] rounded-lg transition-colors duration-200 text-lg flex items-center gap-x-2`}
+              className={`font-thin p-3 hover:bg-white hover:text-primary-Light rounded-lg transition-colors duration-200 text-lg flex items-center gap-x-2`}
               aria-haspopup={nav.subs ? "menu" : undefined}
             >
               {nav.icon}
@@ -23,7 +23,7 @@ export default function DesktopHeader({ navItems }: { navItems: Array<any> }) {
 
             {nav.subs && (
               <div
-                className="absolute left-0 top-[50px] w-full bg-[#4C5FD5]
+                className="absolute left-0 top-[50px] w-full bg-primary-Light
                  border-[0.5px] border-[#e2e6f0d5] rounded-lg p-3 z-10
                  opacity-0 translate-y-1 scale-95 pointer-events-none
                  group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100 group-hover:pointer-events-auto
@@ -33,49 +33,49 @@ export default function DesktopHeader({ navItems }: { navItems: Array<any> }) {
               >
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   ترجمه
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   تفسیر
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   حدیث
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   اعلام و اسما
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   اعراب قران
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   موضوعات
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   آیالت مرتبط
                 </Link>
                 <Link
                   href="/"
-                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                  className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primary-Light block"
                 >
                   آیات در کتاب
                 </Link>
