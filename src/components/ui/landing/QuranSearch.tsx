@@ -17,10 +17,10 @@ export default function QuranSearch() {
             return <div style={{
                 boxShadow: "1px 0px 20px 3px #CBD6FD"
             }} className="sm:p-5 p-3 rounded-xl bg-white text-black flex flex-shrink-0 items-center justify-start gap-x-3" key={_i}>
-                <div className="bg-primary-Light p-3 rounded-full text-white">
-                    <Globe size={20}/>
+                <div className="bg-primary-Light text-xl p-3 rounded-full text-white">
+                    <Globe size={18}/>
                 </div>
-                <h1 className="sm:text-lg text-sm">اعراب قران را در بیابید</h1>
+                <h1 className="sm:text-lg text-sm">اعراب قران</h1>
             </div>
         })}
       </div>
