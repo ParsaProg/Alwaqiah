@@ -10,13 +10,17 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          Light: "",
+          Light: "#4C5FD5",
           Dark: "",
         },
         secondry: {
-          Light: "",
+          Light: "#FFB400",
           Dark: "",
         },
+        confirmHover: {
+          Light: "#7C5CE3",
+          Dark: ""
+        }
       },
     },
   },
