@@ -43,14 +43,14 @@ export default function MobileHeader({
                 return (
                   <div key={index} className="relative group ">
                     {index === 2 ? (
-                      <button className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-[#4C5FD5] hover:text-white w-full">
+                      <button className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-primary-Light hover:text-white w-full">
                         {nav.icon}
                         {nav.title}
                         {nav.subs ? <ChevronDown size={18} /> : null}
                       </button>
                     ) : (
                       <Link
-                        className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-[#4C5FD5] hover:text-white"
+                        className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-primary-Light hover:text-white"
                         href={nav.route}
                       >
                         {nav.icon}
@@ -62,49 +62,49 @@ export default function MobileHeader({
                       <div className="group-hover:opacity-[1] opacity-0 absolute top-0 left-[180px] text-start bg-white rounded-xl shadow-lg shdadow-[#DDE3F8] p-3 text-black border-[1px] border-[#E2E6F0] z-[9999999] w-[120px] flex flex-col transition-all duration-200">
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           ترجمه
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           تفسیر
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           حدیث
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           اعلام و اسما
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           اعراب قران
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           موضوعات
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           آیالت مرتبط
                         </Link>
                         <Link
                           href="/"
-                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-[#4C5FD5] block"
+                          className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           آیات در کتاب
                         </Link>
@@ -114,14 +114,14 @@ export default function MobileHeader({
                 );
               })}
               <Link
-                className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-[#4C5FD5] hover:text-white"
+                className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-primary-Light hover:text-white"
                 href={"/comments"}
               >
                 <Store size={18} />
                 درباره‌ی تیم‌الواقعه
               </Link>
               <Link
-                className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-[#4C5FD5] hover:text-white"
+                className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-primary-Light hover:text-white"
                 href={"/comments"}
               >
                 <MessageCircleDashed size={18} />
