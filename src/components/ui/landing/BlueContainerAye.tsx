@@ -12,11 +12,10 @@ export default function BlueContainerAye() {
       style={{
         backgroundImage: `url(${BlueContainerBackground.src})`,
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
         backgroundSize: "cover",
       }}
     >
-      <div className="mx-auto [@media(min-width:1495px)]:w-[90%] w-[95%] flex [@media(max-width:1220px)]:flex-col items-center relative justify-center gap-x-[100px] ">
+      <div className="md:bg-center bg-right mx-auto [@media(min-width:1495px)]:w-[90%] w-[95%] flex [@media(max-width:1220px)]:flex-col items-center relative justify-center gap-x-[100px] ">
         <div className="flex flex-col items-center gap-y-5">
           <Image
             width={800}
@@ -26,7 +25,7 @@ export default function BlueContainerAye() {
             className="w-[66px] h-[41px]"
           ></Image>
           <h1 className="text-white font-thin text-lg">سوره الحج ، آیه 1</h1>
-          <h1 className="text-white font-thin text-3xl untihamo">
+          <h1 className="text-white font-thin text-3xl untihamo sm:text-start text-center">
             يَـٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُواْ رَبَّكُمۡۚ إِنَّ زَلۡزَلَةَ
             ٱلسَّاعَةِ شَيۡءٌ عَظِيمࣱ
           </h1>
@@ -37,7 +36,7 @@ export default function BlueContainerAye() {
             src={UnderQuran.src}
             className="w-[568px] h-[24px]"
           ></Image>
-          <h2 className="text-white font-thin text-lg">
+          <h2 className="text-white font-thin text-lg sm:text-start text-center">
             اى مردم! از پروردگارتان پروا كنيد، بى‌ترديد زلزلۀ قيامت، واقعه‌اى
             بزرگ است
           </h2>
