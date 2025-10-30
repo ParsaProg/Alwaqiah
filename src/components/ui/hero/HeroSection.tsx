@@ -35,7 +35,7 @@ export const HeroSection = () => {
             className="w-[66px] h-[41px]"
           ></Image>
           <h1 className="text-white font-thin text-lg">سوره الحج ، آیه 1</h1>
-          <h1 className="text-white font-thin text-3xl untihamo">
+          <h1 className="text-white font-thin text-3xl untihamo sm:text-start text-center">
             يَـٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُواْ رَبَّكُمۡۚ إِنَّ زَلۡزَلَةَ
             ٱلسَّاعَةِ شَيۡءٌ عَظِيمࣱ
           </h1>
@@ -46,7 +46,7 @@ export const HeroSection = () => {
             src={UnderQuran.src}
             className="w-[568px] h-[24px]"
           ></Image>
-          <h2 className="text-white font-thin text-lg">
+          <h2 className="text-white font-thin text-lg sm:text-start text-center">
             اى مردم! از پروردگارتان پروا كنيد، بى‌ترديد زلزلۀ قيامت، واقعه‌اى
             بزرگ است
           </h2>
