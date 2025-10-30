@@ -3,6 +3,7 @@ import "./main.css";
 import ClientLayout from "./clientLayout";
 import FavIcon from "./favicon.ico"
 import Header from "@/components/ui/header/Header";
+import Footer from "@/components/main/footer/Footer";
 
 export const metadata: Metadata = {
   icons: {
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="iransans">
         <Header />
         <ClientLayout>{children}</ClientLayout>
+        <Footer />
       </body>
     </html>
   );
