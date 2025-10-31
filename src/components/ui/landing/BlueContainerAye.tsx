@@ -15,7 +15,7 @@ export default function BlueContainerAye() {
         backgroundSize: "cover",
       }}
     >
-      <div className="md:bg-center bg-right mx-auto [@media(min-width:1495px)]:w-[90%] w-[95%] flex [@media(max-width:1220px)]:flex-col items-center relative justify-center gap-x-[100px] ">
+      <div className="md:bg-center bg-bottom mx-auto [@media(min-width:1495px)]:w-[90%] w-[95%] flex [@media(max-width:1220px)]:flex-col items-center relative justify-center gap-x-[100px] ">
         <div className="flex flex-col items-center gap-y-5">
           <Image
             width={800}
