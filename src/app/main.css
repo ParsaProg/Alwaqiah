@@ -1515,6 +1515,13 @@ body{
   }
 }
 
+@media(max-width:1050px) {
+  .\[\@media\(max-width\:1050px\)\]\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media(max-width:1060px) {
   .\[\@media\(max-width\:1060px\)\]\:mt-\[50px\] {
     margin-top: 50px;
@@ -1534,6 +1541,11 @@ body{
 
   .\[\@media\(max-width\:1060px\)\]\:items-center {
     align-items: center;
+  }
+
+  .\[\@media\(max-width\:1060px\)\]\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
