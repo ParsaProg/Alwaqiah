@@ -158,7 +158,7 @@ export default function LoginPage() {
           <div className="cursor-pointer">فراموشی رمز‌عبور؟</div>
         </section>
       </div>
-      <div className="[@media(max-width:1060px)]:flex hidden w-[95%] rounded-xl shadow-[0px_0px_15px_5px]  text-center flex-col gap-y-3 shadow-[#CBD6FD] p-10 text-black">
+      <div className="[@media(max-width:1060px)]:flex hidden w-[90%] rounded-xl shadow-[0px_0px_15px_5px]  text-center flex-col gap-y-3 shadow-[#CBD6FD] p-10 text-black">
         <h1 className="font-bold untihamo text-2xl">
           بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
         </h1>
