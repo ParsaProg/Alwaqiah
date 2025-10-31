@@ -115,7 +115,7 @@ export default function LoginPage() {
         </section>
       </div>
       <ArrowDown className="[@media(max-width:1060px)]:visible hidden animate-bounce text-primary-Light" />
-      <div className="w-full [@media(min-width:601px)]:max-w-[600px] max-w-[95%] rounded-xl shadow-[0px_0px_15px_5px] flex text-center flex-col gap-y-3 shadow-[#CBD6FD] p-8 text-black">
+      <div className="w-full [@media(min-width:601px)]:max-w-[600px] max-w-[90%] rounded-xl shadow-[0px_0px_15px_5px] flex text-center flex-col gap-y-3 shadow-[#CBD6FD] p-8 text-black">
         <h1 className="mt-3 font-thin text-confirmHover-Light text-3xl">
           ورود به سامانه‌ی الواقعه
         </h1>
