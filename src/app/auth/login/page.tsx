@@ -15,7 +15,8 @@ import { ArrowDown, Eye, Lock, User } from "lucide-react";
 import { getGreeting } from "@/utils/setWelcomeText";
 
 export default function LoginPage() {
-  const [time, setTime] = useState<Date>(new Date());
+  const [hasMounted, setHasMounted] = useState(false);
+  const [time, setTime] = useState<Date | null>(new Date());
   const [tabIndex, setTabIndex] = useState<number>(0);
   const day = new Date().getDay();
   useEffect(() => {
@@ -31,7 +32,13 @@ export default function LoginPage() {
   const Minute = time?.getMinutes();
   const Second = time?.getSeconds();
 
-  if (!time) return null;
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  
+  if (!hasMounted || !time) {
+    return null;
+  }
 
   return (
     <div className="[@media(max-width:1060px)]:mt-[50px] mt-[100px] gap-y-[30px] gap-x-[100px] flex items-start justify-center flex-row [@media(max-width:1060px)]:items-center [@media(max-width:1060px)]:flex-col">
@@ -40,9 +47,9 @@ export default function LoginPage() {
         <div>
           <h1 dir="ltr" className="font-bold text-lg text-primary-Light">
             {convertToFarsiNumbers(
-              `${Hour < 10 ? `0${Hour}` : Hour}:${
-                Minute < 10 ? `0${Minute}` : Minute
-              }:${Second < 10 ? `0${Second}` : Second}`
+              `${Hour! < 10 ? `0${Hour}` : Hour}:${
+                Minute! < 10 ? `0${Minute}` : Minute
+              }:${Second! < 10 ? `0${Second}` : Second}`
             )}
           </h1>
           <h2 className="mt-1 font-bold text-sm text-confirmHover-Light">
@@ -51,7 +58,9 @@ export default function LoginPage() {
           </h2>
         </div>
         <section>
-          <h1 className="font-bold text-2xl text-primary-Light">{getGreeting()}</h1>
+          <h1 className="font-bold text-2xl text-primary-Light">
+            {getGreeting()}
+          </h1>
           <h3 className="mt-2 font-thin text-sm text-black">
             به سامانه قران کریم خوش آمدید
           </h3>
@@ -99,9 +108,9 @@ export default function LoginPage() {
         <div>
           <h1 dir="ltr" className="font-bold text-lg text-primary-Light">
             {convertToFarsiNumbers(
-              `${Hour < 10 ? `0${Hour}` : Hour}:${
-                Minute < 10 ? `0${Minute}` : Minute
-              }:${Second < 10 ? `0${Second}` : Second}`
+              `${Hour! < 10 ? `0${Hour}` : Hour}:${
+                Minute! < 10 ? `0${Minute}` : Minute
+              }:${Second! < 10 ? `0${Second}` : Second}`
             )}
           </h1>
           <h2 className="mt-1 font-bold text-sm text-confirmHover-Light">
@@ -112,13 +121,18 @@ export default function LoginPage() {
           </h2>
         </div>
         <section>
-          <h1 className="font-bold text-2xl text-primary-Light">{getGreeting()}</h1>
+          <h1 className="font-bold text-2xl text-primary-Light">
+            {getGreeting()}
+          </h1>
           <h3 className="mt-2 font-thin text-sm text-black">
             به سامانه قران کریم خوش آمدید
           </h3>
         </section>
       </div>
-      <ArrowDown className=" [@media(min-width:1060px)]:hidden visible animate-bounce text-primary-Light" size={20}/>
+      <ArrowDown
+        className=" [@media(min-width:1060px)]:hidden visible animate-bounce text-primary-Light"
+        size={20}
+      />
       <div className="w-full [@media(min-width:601px)]:max-w-[600px] max-w-[90%] rounded-xl shadow-[0px_0px_15px_5px] flex text-center flex-col gap-y-3 shadow-[#CBD6FD] p-8 text-black">
         <h1 className="mt-3 font-thin text-confirmHover-Light text-3xl">
           ورود به سامانه‌ی الواقعه
