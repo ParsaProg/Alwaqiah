@@ -1,0 +1,110 @@
+/* AnalogClock.module.css */
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outset-container{
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0px 10px 1px rgba(38, 2, 183, 0.429);
+}
+
+.clock {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset 0 0px 10px 1px rgba(38, 2, 183, 0.429);
+  border: 20px solid #DEE1E7;
+}
+
+.hour-mark {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 52%;
+  transform-origin: bottom center;
+}
+
+.hour-number {
+  margin: -3.7px;
+  position: absolute;
+  top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+.hour-hand {
+  width: 6px;
+  height: 60px;
+  background-color: #4c5fd5;
+  z-index: 3;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 75px;
+  background-color: #7c5ce3;
+  z-index: 2;
+}
+
+.second-hand {
+  width: 2px;
+  height: 85px;
+  background-color: #00C7B7;
+  z-index: 1;
+  transition: all ease-in 0.1s;
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #7c5ce3;
+  border-radius: 50%;
+  z-index: 4;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+  .clock {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hour-hand {
+    height: 60px;
+  }
+
+  .minute-hand {
+    height: 85px;
+  }
+
+  .second-hand {
+    height: 100px;
+  }
+
+  .hour-number {
+    font-size: 12px;
+  }
+}
