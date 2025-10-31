@@ -2,7 +2,7 @@ export const getGreeting = (withEmoji = true, customRanges = false) => {
   const hour = new Date().getHours();
   let msg = '';
 
-  if (hour >= 4 && hour < 12) {
+  if (hour >= 0 && hour < 12) {
     msg = 'صبح بخیر';
   } else if (hour >= 12 && hour < 14) {
     msg = 'ظهر بخیر';

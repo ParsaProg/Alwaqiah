@@ -30,8 +30,11 @@ export default function LoginPage() {
   const Hour = time?.getHours();
   const Minute = time?.getMinutes();
   const Second = time?.getSeconds();
+
+  if (!time) return null;
+
   return (
-    <div className="mt-[50px] gap-y-[30px] gap-x-[100px] flex items-start justify-center flex-row [@media(max-width:1060px)]:items-center [@media(max-width:1060px)]:flex-col">
+    <div className="[@media(max-width:1060px)]:mt-[50px] mt-[100px] gap-y-[30px] gap-x-[100px] flex items-start justify-center flex-row [@media(max-width:1060px)]:items-center [@media(max-width:1060px)]:flex-col">
       <div className="[@media(max-width:1060px)]:hidden visible text-center flex flex-col items-center gap-y-5">
         <ModernAnalogClock />
         <div>
@@ -48,7 +51,7 @@ export default function LoginPage() {
           </h2>
         </div>
         <section>
-          <h1 className="font-bold text-2xl text-primary-Light">ظهر بخیر ☀️</h1>
+          <h1 className="font-bold text-2xl text-primary-Light">{getGreeting()}</h1>
           <h3 className="mt-2 font-thin text-sm text-black">
             به سامانه قران کریم خوش آمدید
           </h3>
