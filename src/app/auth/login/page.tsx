@@ -12,6 +12,7 @@ import convertToFarsiNumbers from "@/functions/EnToFnNumbers";
 import { useEffect, useState } from "react";
 import { getShamsiDate } from "@/utils/shamsiDate";
 import { ArrowDown, Eye, Lock, User } from "lucide-react";
+import { getGreeting } from "@/utils/setWelcomeText";
 
 export default function LoginPage() {
   const [time, setTime] = useState<Date>(new Date());
@@ -108,7 +109,7 @@ export default function LoginPage() {
           </h2>
         </div>
         <section>
-          <h1 className="font-bold text-2xl text-primary-Light">ظهر بخیر ☀️</h1>
+          <h1 className="font-bold text-2xl text-primary-Light">{getGreeting()}</h1>
           <h3 className="mt-2 font-thin text-sm text-black">
             به سامانه قران کریم خوش آمدید
           </h3>
