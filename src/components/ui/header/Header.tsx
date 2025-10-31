@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+
 import Logo from "@/../public/logo/waqiah-logo.svg";
 import {
   Album,
@@ -171,12 +171,12 @@ export default function Header() {
               نظرات مسلمانان
             </button>
 
-            <button className=" hover:bg-white hover:text-primary-Light transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
+            <Link href={"/auth/login"} className=" hover:bg-white hover:text-primary-Light transition-colors duration-200 font-thin border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
               <UserRoundCheck size={18} />
               <h1 className="[@media(max-width:570px)]:hidden visible">
                 ورود / عضویت
               </h1>
-            </button>
+            </Link>
             <button className="hover:bg-white hover:text-primary-Light transition-colors duration-200 font-bold border-[2px] border-[#E2E6F0] rounded-xl flex items-center justify-center gap-x-2 p-3">
               <Moon size={18} />
             </button>
