@@ -999,6 +999,11 @@ video {
   row-gap: 20px;
 }
 
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
