@@ -2,6 +2,7 @@
 import RightLoginPageSection from "@/components/ui/auth/login/RightSection";
 import "@/styles/analog_clock.css";
 import { ArrowDown, Eye, Lock, User } from "lucide-react";
+import Link from "next/link";
 
 export default function LoginPage() {
   return (
@@ -51,7 +52,9 @@ export default function LoginPage() {
           </button>
 
           <section className="mt-5 text-primary-Light w-full flex justify-between items-center">
-            <div className="cursor-pointer">ثبت نام کنید</div>
+            <Link href={"/auth/sign-up"}>
+              ثبت نام کنید
+            </Link>
             <div className="cursor-pointer">فراموشی رمز‌عبور؟</div>
           </section>
         </div>
