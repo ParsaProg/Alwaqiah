@@ -48,8 +48,8 @@ export default function RightLoginPageSection({ mode }: { mode: string }) {
             )}
           </h1>
           <h2 className="mt-1 font-bold text-sm text-confirmHover-Light">
-            {getShamsiDate().weekday} {getShamsiDate().day}{" "}
-            {getShamsiDate().month} {getShamsiDate().year}
+            {getShamsiDate().weekday} {convertToFarsiNumbers(getShamsiDate().day.toString())}{" "}
+            {getShamsiDate().month} {convertToFarsiNumbers(getShamsiDate().year.toString())}
           </h2>
         </div>
       )}
