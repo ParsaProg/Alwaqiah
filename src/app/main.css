@@ -991,6 +991,14 @@ video {
   row-gap: 30px;
 }
 
+.gap-y-\[10px\] {
+  row-gap: 10px;
+}
+
+.gap-y-\[20px\] {
+  row-gap: 20px;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }

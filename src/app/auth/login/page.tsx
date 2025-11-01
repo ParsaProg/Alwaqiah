@@ -5,7 +5,7 @@ import { ArrowDown, Eye, Lock, User } from "lucide-react";
 
 export default function LoginPage() {
   return (
-    <div className="[@media(max-width:1060px)]:mt-[50px] mt-[100px] gap-y-[30px] gap-x-[100px] flex items-start justify-center flex-row [@media(max-width:1060px)]:items-center [@media(max-width:1060px)]:flex-col">
+    <div className="[@media(max-width:1060px)]:mt-[50px] mt-[100px] gap-y-[20px] gap-x-[100px] flex items-start justify-center flex-row [@media(max-width:1060px)]:items-center [@media(max-width:1060px)]:flex-col">
       <RightLoginPageSection mode="desktop" />
       <RightLoginPageSection mode="mobile" />
       <ArrowDown

@@ -35,7 +35,7 @@ export default function RightLoginPageSection({ mode }: { mode: string }) {
         mode === "desktop"
           ? "[@media(max-width:1060px)]:hidden"
           : "[@media(min-width:1060px)]:hidden w-full [@media(min-width:601px)]:max-w-[600px] max-w-[90%] "
-      } visible text-center flex flex-col items-center gap-y-5`}
+      } visible text-center flex flex-col items-center gap-y-3`}
     >
       {mode !== "mobile-end" && <ModernAnalogClock />}
       {mode !== "mobile-end" && (
