@@ -24,7 +24,7 @@ export default function SignUpPage() {
                 <input
                   type="text"
                   placeholder="نام خود را وارد کنید"
-                  className="w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
+                  className="text-black w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
                 />
               </div>
             </section>
@@ -35,7 +35,7 @@ export default function SignUpPage() {
                 <input
                   type="text"
                   placeholder="نام خانوادگی خود را وارد کنید"
-                  className="w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
+                  className="text-black w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
                 />
               </div>
             </section>
@@ -48,7 +48,7 @@ export default function SignUpPage() {
               <input
                 type="text"
                 placeholder="نام کاربری خود را وارد کنید"
-                className="w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
+                className="text-black w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
               />
             </div>
           </section>
@@ -64,7 +64,7 @@ export default function SignUpPage() {
               <input
                 type="text"
                 placeholder="رمز عبور خود را وارد کنید"
-                className="w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
+                className="text-black w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
               />
             </div>
           </section>
@@ -80,7 +80,7 @@ export default function SignUpPage() {
               <input
                 type="text"
                 placeholder="رمز عبور خود را تکرار کنید"
-                className="w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
+                className="text-black w-full py-5 px-10 outline-none rounded-xl focus:ring-2 focus:ring-confirmHover-Light focus:ring-offset-2 border-[1px] mt-5 border-slate-300 placeholder:text-slate-500 transition-shadow duration-200"
               />
             </div>
           </section>
