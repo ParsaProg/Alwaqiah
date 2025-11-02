@@ -8,7 +8,7 @@ import { Microscope, } from "lucide-react";
 export default function BlueContainerAye() {
   return (
     <div
-      className="mx-auto mt-[100px] [@media(min-width:1495px)]:w-[90%] w-[90%] bg-primary-Light p-8 rounded-xl"
+      className="mx-auto mt-[100px] w-[90%] bg-primary-Light p-8 rounded-xl"
       style={{
         backgroundImage: `url(${BlueContainerBackground.src})`,
         backgroundRepeat: "no-repeat",
