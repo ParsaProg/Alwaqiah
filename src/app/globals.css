@@ -1,26 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+:root {
+  /* Light theme colors */
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-light: #4c5fd5;
+  --primary-dark: #3a4bc2;
+  --secondary-light: #ffb400;
+  --secondary-dark: #e6a200;
+  --confirmHover-light: #7c5ce3;
+  --confirmHover-dark: #6b4bd1;
+}
+
+@theme {
+  --color-primary-Light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+
+  --color-secondry-Light: var(--secondary-light);
+  --color-secondary-dark: var(--secondary-dark);
+
+  --color-confirmHover-Light: var(--confirmHover-light);
+  --color-confirm-hover-dark: var(--confirmHover-dark);
+}
 
 .iransans {
-    font-family: IranSans;
+  font-family: IranSans;
 }
 
 .untihamo {
-    font-family: Untihamo;
+  font-family: Untihamo;
+}
+
+.quran-taha {
+  font-family: Qurantaha;
 }
 
 @font-face {
-    font-family: IranSans;
-    src: url("../../public/fonts/iranSansX-light.woff2");
-    font-weight: 400;
+  font-family: IranSans;
+  src: url("../../public/fonts/iranSansX-light.woff2");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: Untihamo;
-    src: url("../../public/fonts/Untihamo.ttf");
+  font-family: Qurantaha;
+  src: url("../../public/fonts/QuranTaha.CNEvPIsN.ttf");
+  font-weight: 400;
 }
 
-body{
-    user-select: none;
+@font-face {
+  font-family: Untihamo;
+  src: url("../../public/fonts/Untihamo.ttf");
 }
