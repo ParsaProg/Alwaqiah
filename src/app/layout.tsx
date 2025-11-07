@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./main.css";
+import "./globals.css";
 import ClientLayout from "./clientLayout";
 import FavIcon from "./favicon.ico"
 import Header from "@/components/ui/header/Header";
