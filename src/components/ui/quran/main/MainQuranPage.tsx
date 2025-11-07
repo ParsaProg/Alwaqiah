@@ -16,6 +16,7 @@ export default function MainQuranPage() {
         height={800}
         className="w-full h-[100%]"
       />
+      
       <Image
         alt="quran-book-center"
         src={QuranBookCenterBottom.src}
