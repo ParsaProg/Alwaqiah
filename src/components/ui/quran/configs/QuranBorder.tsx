@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function QuranBorder({ isRight }: { isRight: boolean }) {
   return (
     <div
-      className={` absolute w-[36%] h-[750px] ${
-        isRight ? "rotate-[180deg] right-[170px]" : "left-[170px]"
+      className={`absolute [@media(max-width:1530px)]:w-[43%] w-[36%] h-[750px] ${
+        isRight ? "rotate-[180deg] [@media(max-width:1530px)]:right-[50px] right-[170px]" : "[@media(max-width:1530px)]:left-[50px] left-[170px]"
       }`}
     >
       <Image
