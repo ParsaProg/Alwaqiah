@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: title,
     description: description,
   },
-};npm install
+};
 
 
 export default function LoginLayout({
