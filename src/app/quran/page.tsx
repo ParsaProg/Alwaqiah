@@ -1,4 +1,5 @@
 import MainQuranPage from "@/components/ui/quran/main/MainQuranPage";
+import MobileQuranPage from "@/components/ui/quran/main/MobileQuranPage";
 import {
   ArrowRight,
   ChevronDown,
@@ -97,6 +98,9 @@ export default function QuranPage() {
       <div className="mt-[50px] w-[98%]">
         <div className="[@media(max-width:1130px)]:hidden visible">
           <MainQuranPage />
+        </div>
+        <div className="[@media(min-width:1130px)]:hidden visible">
+          <MobileQuranPage />
         </div>
       </div>
     </div>
