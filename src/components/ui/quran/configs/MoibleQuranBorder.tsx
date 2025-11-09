@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MobileQuranBorder() {
   return (
-    <div className={`relative w-[100%] h-[650px] z-100`}>
+    <div className={`relative w-[100%] h-[800px] z-100`}>
       <Image
         draggable={false}
         alt="main-quran-layout-image"
@@ -41,7 +41,7 @@ export default function MobileQuranBorder() {
       />
       <div
         style={{
-          height: "calc(650px - (2 * 24px))",
+          height: "calc(800px - (2 * 24px))",
           backgroundImage:
             "url(https://quran.inoor.ir/_nuxt/quran-taz-rep-ver-small.BcZYRBDe.png)",
           backgroundSize: "24px",
@@ -74,7 +74,7 @@ export default function MobileQuranBorder() {
       ></div>
        <div
         style={{
-          height: "calc(650px - (2 * 24px))",
+          height: "calc(800px - (2 * 24px))",
           backgroundImage:
             "url(https://quran.inoor.ir/_nuxt/quran-taz-rep-ver-small.BcZYRBDe.png)",
           backgroundSize: "24px",
