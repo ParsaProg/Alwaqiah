@@ -50,6 +50,9 @@ export default function MobileHeader({
                       </button>
                     ) : (
                       <Link
+                        onClick={() => {
+                          setShowDialog(false);
+                        }}
                         className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-primary-Light hover:text-white"
                         href={nav.route}
                       >
@@ -61,48 +64,72 @@ export default function MobileHeader({
                     {nav.subs && (
                       <div className="group-hover:opacity-[1] opacity-0 absolute top-0 left-[180px] text-start bg-white rounded-xl shadow-lg shdadow-[#DDE3F8] p-3 text-black border-[1px] border-[#E2E6F0] z-[9999999] w-[120px] flex flex-col transition-all duration-200">
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           ترجمه
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           تفسیر
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           حدیث
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           اعلام و اسما
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           اعراب قران
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           موضوعات
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
                           آیالت مرتبط
                         </Link>
                         <Link
+                          onClick={() => {
+                            setShowDialog(false);
+                          }}
                           href="/"
                           className="transition-colors duration-200 hover:bg-white p-2 rounded-lg text-md w-full hover:text-primarybg-primary-Light block"
                         >
