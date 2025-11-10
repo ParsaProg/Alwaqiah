@@ -95,7 +95,7 @@ export default function QuranPage() {
         </section>
       </div>
 
-      <div className="mt-[50px] w-[98%]">
+      <div className="mt-[30px] w-[98%]">
         <div className="[@media(max-width:1130px)]:hidden visible">
           <MainQuranPage />
         </div>
