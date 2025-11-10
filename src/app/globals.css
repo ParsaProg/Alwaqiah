@@ -51,3 +51,15 @@
   font-family: Untihamo;
   src: url("../../public/fonts/Untihamo.ttf");
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .group-hover-mobile-fix {
+    opacity: 1;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .group.active .group-hover-mobile-fix {
+    opacity: 1;
+  }
+}
