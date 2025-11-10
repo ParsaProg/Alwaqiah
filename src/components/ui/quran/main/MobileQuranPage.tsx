@@ -1,11 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import MobileQuranBorder from "../configs/MoibleQuranBorder";
 import convertToFarsiNumbers from "@/functions/EnToFnNumbers";
 import Hezb1 from "@/../public/svg/hezb.svg";
 import Hezb2 from "@/../public/svg/hezb-2.svg";
 import AyeNumberImage from "@/../public/images/quran/3.png";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function MobileQuranPage() {
+  const opendedContainerClickedData = [
+    "ترجمه",
+    "تفسیر",
+    "حدیث",
+    "واژه نامه",
+    "موضوعات",
+    "اعراب قران",
+    "اعلام و اسما",
+  ];
+  const [clickedIndex, setClickedIndex] = useState<number | undefined>(
+    undefined
+  );
+  
   const quranPage = [
     {
       ayeText: "ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ",
@@ -34,6 +52,8 @@ export default function MobileQuranPage() {
         "راه كسانى كه به آنان انعام كرده‌اى،آنان نه كه مورد خشم قرار گرفته‌اند و نه گمراهان",
     },
   ];
+
+
   return (
     <div className="w-[98%] mx-auto relative">
       <MobileQuranBorder />
@@ -42,7 +62,9 @@ export default function MobileQuranPage() {
           height: "calc(800px - (2 * 25px))",
           width: "calc(100% - 48px)",
         }}
-        className="top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] h-[800px] select-auto absolute top-0 z-1 bg-[#FDFBDA] overflow-y-scroll custom-scrollbar p-3"
+        className={`top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] h-[800px] select-auto absolute top-0 z-1 bg-[#FDFBDA] ${
+          clickedIndex === undefined && "overflow-y-scroll"
+        } custom-scrollbar p-3`}
       >
         <div className="flex items-center justify-center mt-3 w-[100%] [@media(max-width:560px)]:h-15 h-20 mx-auto outline-[3px] outline-[#36367d]">
           <div className="overflow-hidden w-full [@media(max-width:560px)]:h-15 h-20 mx-auto border-[3px] border-[#D6B46E] relative">
@@ -134,10 +156,36 @@ export default function MobileQuranPage() {
         </h1>
         <div className="mt-5 shrink-0 p-5 w-full flex items-start justify-center gap-3 flex-col  text-black untihamo text-xl">
           {quranPage.map((aye, _i) => {
+            const localRef = useRef<HTMLDivElement | null>(null);
+
+            useEffect(() => {
+              if (clickedIndex !== _i) return;
+
+              const handleClickOutside = (e: MouseEvent) => {
+                if (
+                  localRef.current &&
+                  !localRef.current.contains(e.target as Node)
+                ) {
+                  setClickedIndex(undefined);
+                }
+              };
+
+              document.addEventListener("mousedown", handleClickOutside);
+              return () =>
+                document.removeEventListener("mousedown", handleClickOutside);
+            }, [clickedIndex, _i]);
             return (
-              <div key={_i}>
-                <div className="group z-100 text-start flex items-start justify-start flex-wrap gap-3">
-                  <span className="group-hover:bg-secondry-Light transition-colors duration-200 cursor-grab text-center relative box-border leading-10">
+              <div
+                onClick={() => setClickedIndex(_i)}
+                key={_i}
+                className="group relative"
+              >
+                <div className="select-none z-300 text-start flex items-start justify-start flex-wrap gap-3">
+                  <span
+                    className={`${
+                      clickedIndex === _i && "bg-secondry-Light"
+                    } group-hover:bg-secondry-Light z-300 transition-colors duration-200 cursor-grab text-center relative box-border leading-10`}
+                  >
                     {aye.ayeText}
                   </span>
                   <div
@@ -153,9 +201,44 @@ export default function MobileQuranPage() {
                     </h1>
                   </div>
                 </div>
-                <span className="group-hover:bg-secondry-Light transition-colors duration-200 cursor-grab relative leading-5 iransans text-sm font-thin text-start">
+                <span
+                  className={`z-300 ${
+                    clickedIndex === _i && "bg-secondry-Light"
+                  } group-hover:bg-secondry-Light transition-colors duration-200 cursor-grab relative leading-5 iransans text-sm font-thin text-start`}
+                >
                   {aye.translate}
                 </span>
+                <AnimatePresence mode="wait">
+                  {clickedIndex === _i && (
+                    <motion.div
+                      ref={localRef}
+                      key="container"
+                      initial="hidden"
+                      animate="visible"
+                      exit="hidden"
+                      transition={{ duration: 0.1 }}
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.8 },
+                        visible: { opacity: 1, scale: 1 },
+                      }}
+                      className="select-none iransans text-sm font-thin flex flex-col gap-y-3 items-start text-start absolute top-[40px] bg-white rounded-lg text-black  py-4 shadow-[#00000040] shadow-[0px_0px_10px_5px] z-400"
+                    >
+                      {opendedContainerClickedData.map((val, index) => {
+                        return (
+                          <div className="w-full" key={index}>
+                            <div className="w-full px-7 cursor-pointer hover:text-primary-Light transition-colors duration-200">
+                              {val}
+                            </div>
+                            {index !==
+                              opendedContainerClickedData.length - 1 && (
+                              <div className="mt-2 w-[90%] mx-auto rounded-xl h-[1px] bg-[#00000040]"></div>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
