@@ -61,7 +61,7 @@ export default function MainQuranPage() {
   return (
     <div className="main-quran-layout w-full h-[900px] flex items-center gap-x-[100px] justify-center relative">
       <div
-        className="right-[calc(170px+96px)] w-[calc(36%-(96px+15px))] h-[calc(710px-(96px+30px))] [@media(max-width:1530px)]:right-[calc(50px+96px)] [@media(max-width:1530px)]:w-[calc(43%-(96px+15px))] select-auto absolute  bg-[#FDFBDA] overflow-y-scroll custom-scrollbar"
+        className="right-[calc(170px+96px)] w-[calc(36%-(96px+15px))] h-[calc(710px-(96px+30px))] [@media(max-width:153 0px)]:right-[calc(50px+96px)] [@media(max-width:1530px)]:w-[calc(43%-(96px+15px))] select-auto absolute bg-[#FDFBDA] overflow-y-scroll custom-scrollbar"
       >
         <div className="flex items-center justify-center mt-6 w-[95%] h-20 mx-auto outline-[3px] outline-[#36367d]">
           <div className="overflow-hidden w-full h-20 mx-auto border-[3px] border-[#D6B46E] relative">
