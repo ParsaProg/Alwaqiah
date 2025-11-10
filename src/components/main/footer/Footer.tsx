@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="mt-[100px] text-center flex p-5 flex-col items-center gap-y-2 w-full py-5 text-white bg-primary-Light">
+    <div className="mt-[30px] text-center flex p-5 flex-col items-center gap-y-2 w-full py-5 text-white bg-primary-Light">
       <section className="text-center flex items-center gap-x-3 text-sm flex-wrap">
         <h3 className="text-center">درباره‌ما</h3>
         |
