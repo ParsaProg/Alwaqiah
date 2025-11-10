@@ -27,7 +27,6 @@ const AnalogClock: React.FC = () => {
     <div className="outset-container">
       <div className="clock-container">
         <div className="clock">
-          {/* ساعت‌های روی صفحه */}
           {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={i}
@@ -43,7 +42,6 @@ const AnalogClock: React.FC = () => {
             </div>
           ))}
 
-          {/* عقربه‌ها */}
           <div
             className="hand hour-hand"
             style={{ transform: `rotate(${hourDegrees}deg)` }}
@@ -57,7 +55,7 @@ const AnalogClock: React.FC = () => {
             style={{ transform: `rotate(${secondDegrees}deg)` }}
           />
 
-          {/* مرکز ساعت */}
+
           <div className="center-circle" />
         </div>
       </div>
