@@ -10,7 +10,7 @@ export default function QuranSearch() {
         {}
     ]
   return (
-    <div className="overflow-hidden mt-[100px] flex flex-shrink-0 items-center justify-center bg-[#FEFCEC] w-full py-5 relative h-[500px]">
+    <div className="overflow-hidden flex flex-shrink-0 items-center justify-center bg-[#FEFCEC] w-full py-5 relative h-[500px]">
         <h1 className="absolute top-10 sm:right-10 right-5 text-4xl font-thin text-black z-[100]">قران پژوهی</h1>
       <div className="mt-[-50px] z-[101] grid grid-cols-2 gap-5">
         {items.map((val, _i) => {
