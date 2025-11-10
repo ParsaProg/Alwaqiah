@@ -17,6 +17,7 @@ export default function MobileHeader({
   navList: Array<any>;
   dialogRef: any;
 }) {
+
   return (
     <div className="[@media(max-width:1495px)]:opacity-[1] opacity-0 transition-opacity duration-200">
       <AnimatePresence>
@@ -41,7 +42,7 @@ export default function MobileHeader({
             <div className="text-start bg-white rounded-xl shadow-lg shdadow-[#DDE3F8] p-5 text-black border-[1px] border-[#E2E6F0] z-[9999999] w-[200px] flex flex-col">
               {navList.map((nav, index) => {
                 return (
-                  <div key={index} className="relative group ">
+                  <div key={index} className="relative group z-100">
                     {index === 2 ? (
                       <button className="flex items-center gap-x-2 text-md p-3 rounded-lg transition-colors hover:bg-primary-Light hover:text-white w-full">
                         {nav.icon}
@@ -62,7 +63,7 @@ export default function MobileHeader({
                       </Link>
                     )}
                     {nav.subs && (
-                      <div className="group-hover:opacity-[1] opacity-0 absolute top-0 left-[180px] text-start bg-white rounded-xl shadow-lg shdadow-[#DDE3F8] p-3 text-black border-[1px] border-[#E2E6F0] z-[9999999] w-[120px] flex flex-col transition-all duration-200">
+                      <div className="group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-focus-within:pointer-events-auto opacity-0 absolute top-0 left-[180px] text-start bg-white rounded-xl shadow-lg shadow-[#DDE3F8] p-3 text-black border-[1px] border-[#E2E6F0] w-[120px] flex flex-col transition-all duration-200">
                         <Link
                           onClick={() => {
                             setShowDialog(false);
