@@ -28,14 +28,14 @@ export default function MobileHeader({
             initial="hidden"
             animate="visible"
             exit="hidden"
-            transition={{ delay: 0.1, duration: 0.1 }}
+            transition={{ duration: 0.05 }}
             variants={{
               visible: {
                 scale: 1,
                 opacity: 1,
                 top: 60,
               },
-              hidden: { opacity: 0, top: -300, scale: 0.5 },
+              hidden: { opacity: 0, top: -30, scale: 0.8 },
             }}
             className=" [@media(max-width:1495px)]:pointer-events-auto pointer-events-none absolute left-0 top-[60px]"
           >
