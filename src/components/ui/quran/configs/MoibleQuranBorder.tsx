@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MobileQuranBorder() {
   return (
-    <div className={`relative w-[100%] h-[800px] z-100`}>
+    <div className={`relative w-[100%] h-[800px]`}>
       <Image
         draggable={false}
         alt="main-quran-layout-image"
@@ -70,7 +70,7 @@ export default function MobileQuranBorder() {
           backgroundPosition: "top",
           backgroundRepeat: "0 repeat-x",
         }}
-        className="z-[2] bottom-0 rotate-[180deg] left-[38px] absolute h-[25px]"
+        className=" bottom-0 rotate-[180deg] left-[38px] absolute h-[25px]"
       ></div>
        <div
         style={{
