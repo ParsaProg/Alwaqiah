@@ -4,7 +4,7 @@ import ErabQuran from "@/../public/images/erab-quran.png";
 
 export default function ErabQuranSection() {
   return (
-    <div className="mt-[100px] w-[90%] mx-auto">
+    <div className=" w-[90%] mx-auto">
       <h1 className="text-black text-3xl font-[500] ">اعراب قران کریم</h1>
       <section className="mt-[50px] w-full flex [@media(max-width:1095px)]:flex-col items-center justify-start gap-10">
         <Image draggable={false} alt="اعراب قران" src={ErabQuran.src} width={800} height={800} className="md:w-[300px] md:h-[300px] w-[150px] h-[150px]"/>
