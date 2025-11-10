@@ -66,7 +66,7 @@ export default function QuranContainerTypes() {
     },
   ];
   return (
-    <div className="mt-[100px] w-[90%] p-8 bg-primary-Light rounded-xl grid items-center justify-center mx-auto gap-5 2xl:grid-cols-9 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-3 grid-cols-2">
+    <div className=" w-[90%] p-8 bg-primary-Light rounded-xl grid items-center justify-center mx-auto gap-5 2xl:grid-cols-9 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-3 grid-cols-2">
       {items.map((item, _i) => {
         return (
           <div
