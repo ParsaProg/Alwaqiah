@@ -4,7 +4,6 @@ import { AnimatePresence } from "framer-motion";
 import { ChevronDown, MessageCircleDashed, Store } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 export default function MobileHeader({
   showDialog,
